@@ -30,6 +30,23 @@ $(document).ready(function () {
         dots: true
     });
 
+    $('.product_block_main_mobile_slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+    });
+
+    $('.product_block_main_desktop_block_slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+    });
+
+    
     if($(window).width() < 1199) {
         $('.activities_slider').slick({
             infinite: true,
@@ -64,6 +81,21 @@ $(document).ready(function () {
         $(".equipment_brands").toggleClass("active");
         $(".equipment_content_top_mobile_left_btn").removeClass("active");
         $(".equipment_category").removeClass("active");
+    });
+
+
+    $(".product_block_top_mobile_left_btn").click(function() {
+        $(this).toggleClass("active");
+        $(".product_category").toggleClass("active");
+        $(".product_block_top_mobile_right_btn").removeClass("active");
+        $(".product_brands").removeClass("active");
+    });
+
+    $(".product_block_top_mobile_right_btn").click(function() {
+        $(this).toggleClass("active");
+        $(".product_brands").toggleClass("active");
+        $(".product_block_top_mobile_left_btn").removeClass("active");
+        $(".product_category").removeClass("active");
     });
     
 });

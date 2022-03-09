@@ -155,6 +155,19 @@ html.no_scroll {
   max-height: 100%;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 .container {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1736,29 +1749,12 @@ html.no_scroll {
   position: relative;
 }
 
-.accordion_block {
-  height: 100vh;
-}
-
 .accordion_block_item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+  height: 100vh;
+  position: relative;
   width: 100%;
-  max-height: 0px;
-  overflow: hidden;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-
-.accordion_block_item.active {
-  max-height: 100%;
-  overflow: auto;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
 }
 
 .accordion_block_item_title {
@@ -1959,9 +1955,193 @@ html.no_scroll {
           order: 1;
 }
 
-.accordion_block_item:last-child {
+.accordion_block_item:nth-child(3) {
   background: #C6D2E1;
   z-index: 3;
+}
+
+.accordion_block_item:nth-child(3) .accordion_block_item_img {
+  position: relative;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  min-height: 252px;
+}
+
+.accordion_block_item:nth-child(3) .accordion_block_item_img img {
+  position: absolute;
+  left: 0px;
+  top: 37px;
+  width: 235px;
+}
+
+.accordion_block_item:nth-child(3)_info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.accordion_block_item:nth-child(4) {
+  background: #E7F3FF;
+  z-index: 4;
+}
+
+.accordion_block_item:nth-child(4) .accordion_block_item_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  min-height: 352px;
+}
+
+.accordion_block_item:nth-child(4) .accordion_block_item_img img {
+  width: 270px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+}
+
+.accordion_block_item:nth-child(4) .accordion_block_item_img_info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.accordion_block_item:nth-child(5) {
+  background: #DAE6F5;
+  z-index: 5;
+}
+
+.accordion_block_item:nth-child(5) .accordion_block_item_img {
+  position: relative;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  min-height: 292px;
+}
+
+.accordion_block_item:nth-child(5) .accordion_block_item_img_main {
+  position: absolute;
+  left: 0px;
+  top: 70px;
+  width: 252px;
+}
+
+.accordion_block_item:nth-child(5) .accordion_block_item_img_sub {
+  position: absolute;
+  bottom: 27px;
+  left: 138px;
+  width: 84px;
+}
+
+.accordion_block_item:nth-child(5)_info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.accordion_block_item:nth-child(6) {
+  background: #C6D2E1;
+  z-index: 6;
+}
+
+.accordion_block_item:nth-child(6) .accordion_block_item_img {
+  position: relative;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  min-height: 252px;
+}
+
+.accordion_block_item:nth-child(6) .accordion_block_item_img img {
+  position: absolute;
+  left: 0px;
+  top: 37px;
+  width: 235px;
+}
+
+.accordion_block_item:nth-child(6)_info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.accordion_block_item:nth-child(7) {
+  background: #E7F3FF;
+  z-index: 7;
+}
+
+.accordion_block_item:nth-child(7) .accordion_block_item_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  min-height: 352px;
+}
+
+.accordion_block_item:nth-child(7) .accordion_block_item_img img {
+  width: 270px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+}
+
+.accordion_block_item:nth-child(7) .accordion_block_item_img_info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.accordion_block_item:nth-child(8) {
+  background: #DAE6F5;
+  z-index: 8;
+}
+
+.accordion_block_item:nth-child(8) .accordion_block_item_img {
+  position: relative;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  min-height: 292px;
+}
+
+.accordion_block_item:nth-child(8) .accordion_block_item_img_main {
+  position: absolute;
+  left: 0px;
+  top: 70px;
+  width: 252px;
+}
+
+.accordion_block_item:nth-child(8) .accordion_block_item_img_sub {
+  position: absolute;
+  bottom: 27px;
+  left: 138px;
+  width: 84px;
+}
+
+.accordion_block_item:nth-child(8)_info {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.accordion_block_item:last-child {
+  background: #C6D2E1;
+  z-index: 9;
 }
 
 .accordion_block_item:last-child .accordion_block_item_img {
@@ -2060,6 +2240,29 @@ html.no_scroll {
 }
 
 @media (min-width: 1200px) {
+  .accordion {
+    overflow: hidden;
+  }
+  .accordion_block {
+    height: 100vh;
+  }
+  .accordion_block_item {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    width: 100%;
+  }
+  .accordion_block_item.active {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: all 0.6s linear;
+    transition: all 0.6s linear;
+  }
   .accordion_block_item_title {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -3612,6 +3815,7 @@ html.no_scroll {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 30px;
+  margin-bottom: 30px;
 }
 
 .about_block h2 {
@@ -3900,6 +4104,7 @@ html.no_scroll {
 @media (min-width: 1200px) {
   .about {
     padding-top: 50px;
+    margin-bottom: 100px;
   }
   .about_block h2 {
     font-size: 36px;

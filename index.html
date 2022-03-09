@@ -1467,9 +1467,9 @@
                     <p>Все грузы застрахованы. Гарантии прописаны в договоре.</p>
                   </div>
                 </div>
-                <div class="accordion_block_item_block_other_hide">
+                <!-- <div class="accordion_block_item_block_other_hide">
                   <img src="img/accordion/scroll.png" alt="">
-                </div>
+                </div> -->
               </div>
 
             </div>
@@ -1497,9 +1497,9 @@
                     <p>Работаем круглые сутки. Экономим время, избавляем от лишних вопросов.</p>
                   </div>
                 </div>
-                <div class="accordion_block_item_block_other_hide">
+                <!-- <div class="accordion_block_item_block_other_hide">
                   <img src="img/accordion/scroll.png" alt="">
-                </div>
+                </div> -->
               </div>  
             </div>
           </div>
@@ -1527,9 +1527,9 @@
                     <p>Получим разрешение на перевозку и оформим сопроводительные документы.</p>
                   </div>
                 </div>
-                <div class="accordion_block_item_block_other_hide">
+                <!-- <div class="accordion_block_item_block_other_hide">
                   <img src="img/accordion/scroll.png" alt="">
-                </div>
+                </div> -->
               </div>
               
             </div>
@@ -1746,6 +1746,7 @@
     <div class="back_modal"></div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
 
@@ -1821,6 +1822,44 @@
               panel.style.maxHeight = panel.scrollHeight + "px";
               } 
           });
+      }
+
+
+      if($(window).width() > 1199) {
+
+        $(window).scroll(function(e) {
+            var hT = $('.accordion').offset().top,
+                hH = $('.accordion').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+            if (wS > (hT+hH-wH)) {
+                if(!$(".num3").hasClass("active")) {
+                    $("html").addClass("no_scroll");
+                    $([document.documentElement, document.body]).animate({
+                        scrollTop: $(".accordion").offset().top
+                    }, 100);
+                    Animate();
+                }
+            }
+        });
+
+        var isEvent = false;
+        function Animate() {
+            $('body').on('mousewheel', function(event) {
+                var direction = event.deltaY;
+                if(direction < 0) {
+                    if (!isEvent) {
+                        $(".accordion_block_item.active").next().addClass("active");
+                        isEvent = true;
+                        setTimeout( function() {
+                            isEvent = false;
+                        }, 1000 );
+                    }
+                } else {
+                    $("html").removeClass("no_scroll");
+                }
+            });
+        }
       }
 
     </script>

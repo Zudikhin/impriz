@@ -26,8 +26,21 @@ $(document).ready(function () {
         slidesToScroll: 1,
         // autoplay: true,
         // autoplaySpeed: 1000,
+        fade: true,
+        cssEase: 'linear',
         arrows: false,
         dots: true
+    });
+
+    $('.main_slider_item').addClass('fadeInUpSD');
+
+    $(".main_slider").on("beforeChange", function() {
+
+        $('.main_slider_item').addClass('fadeInUpSD');
+        setTimeout(() => {    
+          $('.main_slider_item').removeClass('fadeInUpSD');
+        }, 500);
+    
     });
 
     $('.product_block_main_mobile_slider').slick({

@@ -182,18 +182,34 @@
     </section>
 
     <section class="brands">
-      <img src="img/brands/1.png" alt="">
-      <img src="img/brands/2.png" alt="">
-      <img src="img/brands/3.png" alt="">
-      <img src="img/brands/1.png" alt="">
-      <img src="img/brands/2.png" alt="">
-      <img src="img/brands/3.png" alt="">
-      <img src="img/brands/1.png" alt="">
-      <img src="img/brands/2.png" alt="">
-      <img src="img/brands/3.png" alt="">
-      <img src="img/brands/1.png" alt="">
-      <img src="img/brands/2.png" alt="">
-      <img src="img/brands/3.png" alt="">
+      <div class="brands_content">
+        <img src="img/brands/1.png" alt="">
+        <img src="img/brands/2.png" alt="">
+        <img src="img/brands/3.png" alt="">
+        <img src="img/brands/1.png" alt="">
+        <img src="img/brands/2.png" alt="">
+        <img src="img/brands/3.png" alt="">
+        <img src="img/brands/1.png" alt="">
+        <img src="img/brands/2.png" alt="">
+        <img src="img/brands/3.png" alt="">
+        <img src="img/brands/1.png" alt="">
+        <img src="img/brands/2.png" alt="">
+        <img src="img/brands/3.png" alt="">
+      </div>
+      <div class="brands_content">
+        <img src="img/brands/1.png" alt="">
+        <img src="img/brands/2.png" alt="">
+        <img src="img/brands/3.png" alt="">
+        <img src="img/brands/1.png" alt="">
+        <img src="img/brands/2.png" alt="">
+        <img src="img/brands/3.png" alt="">
+        <img src="img/brands/1.png" alt="">
+        <img src="img/brands/2.png" alt="">
+        <img src="img/brands/3.png" alt="">
+        <img src="img/brands/1.png" alt="">
+        <img src="img/brands/2.png" alt="">
+        <img src="img/brands/3.png" alt="">
+      </div>
     </section>
 
     <section class="activities">
@@ -1751,35 +1767,6 @@
     <script src="js/main.js"></script>
 
     <script>
-
-      const slider = document.querySelector('.brands');
-      let mouseDown = false;
-      let startX, scrollLeft;
-
-      let startDragging = function (e) {
-          mouseDown = true;
-          startX = e.pageX - slider.offsetLeft;
-          scrollLeft = slider.scrollLeft;
-      };
-      let stopDragging = function (event) {
-          mouseDown = false;
-      };
-
-      slider.addEventListener('mousemove', (e) => {
-      e.preventDefault();
-      if(!mouseDown) { 
-          return; 
-      }
-          const x = e.pageX - slider.offsetLeft;
-          const scroll = x - startX;
-          slider.scrollLeft = scrollLeft - scroll;
-      });
-
-      // Add the event listeners
-      slider.addEventListener('mousedown', startDragging, false);
-      slider.addEventListener('mouseup', stopDragging, false);
-      slider.addEventListener('mouseleave', stopDragging, false);
-
 
       const category = document.querySelector('.equipment_content_top_desktop');
       let mouseDownCat = false;

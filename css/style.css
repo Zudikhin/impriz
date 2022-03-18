@@ -257,7 +257,7 @@ html {
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
-  color: #425464;
+  color: #FFFFFF;
 }
 
 .header_mobile_top_btn {
@@ -447,7 +447,7 @@ html {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    color: #425464;
+    color: #FFFFFF;
   }
   .header_desktop_top_other {
     display: -webkit-box;
@@ -706,7 +706,7 @@ html {
     left: 0px;
     bottom: 0px;
     width: 40%;
-    height: 160px;
+    height: 120px;
     background: #0F2E43;
     z-index: 0;
   }
@@ -734,7 +734,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 160px;
+    height: 120px;
     z-index: 2;
   }
   .main_slider_item_block_desk_list {
@@ -859,7 +859,7 @@ html {
 .brands {
   background: #C6D2E1;
   border-radius: 0px 5px 0px 0px;
-  height: 167px;
+  height: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1086,6 +1086,19 @@ html {
   }
   .activities_slider_item {
     height: 309px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .activities_slider_item img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
   }
   .activities_slider_item span {
     left: 20px;
@@ -1094,6 +1107,12 @@ html {
   .activities_slider_item p {
     left: 20px;
     bottom: 20px;
+  }
+  .activities_slider_item:hover img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
   }
   .activities_slider .slick-dots {
     margin-top: 20px;
@@ -2618,6 +2637,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 15px;
+  position: relative;
 }
 
 .page_brands_list_item img {
@@ -2631,6 +2651,54 @@ html {
   line-height: 22px;
   color: #151E2A;
   margin-top: 40px;
+}
+
+.page_brands_list_item_text {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 0%;
+  visibility: hidden;
+  height: 100%;
+  background-color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.page_brands_list_item_text p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  line-height: 18px;
+  opacity: 0;
+}
+
+.page_brands_list_item:hover .page_brands_list_item_text {
+  visibility: visible;
+  width: 100%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.page_brands_list_item:hover .page_brands_list_item_text p {
+  opacity: 1;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .page_brands_list_item:nth-child(2n) {
@@ -2722,7 +2790,11 @@ html {
 
 .supply_top_img {
   margin-top: 30px;
-  height: 236px;
+  overflow: hidden;
+}
+
+.supply_top_img img {
+  width: 100%;
 }
 
 .supply_mid_item {
@@ -2914,6 +2986,24 @@ html {
     width: calc(50% - 12px);
     margin-top: 0px;
     height: 416px;
+    position: relative;
+  }
+  .supply_top_img img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .supply_top_img:hover img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   .supply_mid {
     position: relative;
@@ -3054,7 +3144,11 @@ html {
 
 .outsourcing_top_img {
   margin-top: 30px;
-  height: 158px;
+  overflow: hidden;
+}
+
+.outsourcing_top_img img {
+  width: 100%;
 }
 
 .outsourcing_list {
@@ -3265,7 +3359,16 @@ html {
   .outsourcing_top_img {
     width: calc(50% - 12px);
     margin-top: 0px;
-    height: 282px;
+  }
+  .outsourcing_top_img img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .outsourcing_top_img:hover img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   .outsourcing_list {
     margin-top: 100px;
@@ -3403,7 +3506,11 @@ html {
 
 .customs_top_img {
   margin-top: 30px;
-  height: 156px;
+  overflow: hidden;
+}
+
+.customs_top_img img {
+  width: 100%;
 }
 
 .customs_list {
@@ -3542,7 +3649,16 @@ html {
   .customs_top_img {
     width: calc(50% - 12px);
     margin-top: 0px;
-    height: 276px;
+  }
+  .customs_top_img img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .customs_top_img:hover img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
   }
   .customs_top::before {
     bottom: -60px;
@@ -3637,7 +3753,11 @@ html {
 
 .logistics_top_img {
   margin-top: 30px;
-  height: 156px;
+  overflow: hidden;
+}
+
+.logistics_top_img img {
+  width: 100%;
 }
 
 .logistics_list {
@@ -3776,7 +3896,16 @@ html {
   .logistics_top_img {
     width: calc(50% - 12px);
     margin-top: 0px;
-    height: 276px;
+  }
+  .logistics_top_img img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .logistics_top_img:hover img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   .logistics_top::before {
     bottom: -60px;
@@ -3862,7 +3991,11 @@ html {
 
 .repair_top_img {
   margin-top: 30px;
-  height: 216px;
+  overflow: hidden;
+}
+
+.repair_top_img img {
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
@@ -3898,6 +4031,22 @@ html {
     width: calc(50% - 12px);
     margin-top: 0px;
     height: 381px;
+    position: relative;
+  }
+  .repair_top_img img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .repair_top_img:hover img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   .repair_top::before {
     bottom: -60px;

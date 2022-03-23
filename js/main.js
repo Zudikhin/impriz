@@ -25,23 +25,22 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1000,
         fade: true,
-        cssEase: 'linear',
         arrows: false,
         dots: true
     });
 
-    $('.main_slider_item').addClass('fadeInUpSD');
+    // $('.main_slider_item').addClass('fadeInUpSD');
 
-    $(".main_slider").on("beforeChange", function() {
+    // $(".main_slider").on("beforeChange", function() {
 
-        $('.main_slider_item').addClass('fadeInUpSD');
-        setTimeout(() => {    
-          $('.main_slider_item').removeClass('fadeInUpSD');
-        }, 500);
+    //     $('.main_slider_item').addClass('scaleInner');
+    //     setTimeout(() => {
+    //       $('.main_slider_item').removeClass('scaleInner');
+    //     }, 500);
     
-    });
+    // });
 
     $('.product_block_main_mobile_slider').slick({
         infinite: true,
@@ -110,5 +109,17 @@ $(document).ready(function () {
         $(".product_block_top_mobile_left_btn").removeClass("active");
         $(".product_category").removeClass("active");
     });
+
+    // $("#accordion").scroll(function(e) {
+    //     var scroll = -650;
+    //     $(".accordion_block").css('transform', 'translate3d(0px,' + scroll + 'px' + ',' + '0px)');
+    //     $("html").removeClass("no_scroll");
+    // });
+
+    // $('#accordion').on('mousewheel', function(event) {
+    //     var direction = event.deltaY;
+    //     $("html").addClass("no_scroll");
+    //     console.log(direction);
+    // });
     
 });

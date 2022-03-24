@@ -25,7 +25,7 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2500,
         fade: true,
         arrows: false,
         dots: true
@@ -109,17 +109,5 @@ $(document).ready(function () {
         $(".product_block_top_mobile_left_btn").removeClass("active");
         $(".product_category").removeClass("active");
     });
-
-    // $("#accordion").scroll(function(e) {
-    //     var scroll = -650;
-    //     $(".accordion_block").css('transform', 'translate3d(0px,' + scroll + 'px' + ',' + '0px)');
-    //     $("html").removeClass("no_scroll");
-    // });
-
-    // $('#accordion').on('mousewheel', function(event) {
-    //     var direction = event.deltaY;
-    //     $("html").addClass("no_scroll");
-    //     console.log(direction);
-    // });
     
 });

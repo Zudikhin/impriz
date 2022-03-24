@@ -1887,6 +1887,47 @@
           });
       }
 
+      if($(window).width() > 1199) {
+
+        var isEvent = false;
+        $('#accordion').on('mousewheel', function(event) {
+            var direction = event.deltaY;
+            if(direction < 0) {
+                if (!isEvent) {
+                    $(".accordion_block_item.active").next().addClass("active");
+                    isEvent = true;
+                    setTimeout( function() {
+                        isEvent = false;
+                    }, 1000 );
+                }
+            } else {
+                if (!isEvent) {
+                    if($(".accordion_block_item:nth-child(2)").hasClass("active")) {
+                        $(".accordion_block_item.active").last().removeClass("active");
+                        isEvent = true;
+                        setTimeout( function() {
+                            isEvent = false;
+                        }, 1000 );
+                    }
+                }
+            }
+        });
+
+        $(document).on('mousewheel', function(e) {
+          var div = $("#accordion");
+          if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $("html").removeClass("no_scroll"); 
+          } else {
+            $("html").addClass("no_scroll");
+            if($(".accordion_block_item").last().hasClass("active")) {
+                $("html").removeClass("no_scroll");
+            } else if(!$(".accordion_block_item:nth-child(2)").hasClass("active")) {
+                $("html").removeClass("no_scroll");
+            }
+          }
+        });
+
+      }
 
       // if($(window).width() > 1199) {
 
@@ -1908,7 +1949,7 @@
 
       //   var isEvent = false;
       //   function Animate() {
-      //       $('body').on('mousewheel', function(event) {
+      //       $('#accordion').on('mousewheel', function(event) {
       //           var direction = event.deltaY;
       //           if(direction < 0) {
       //               if (!isEvent) {

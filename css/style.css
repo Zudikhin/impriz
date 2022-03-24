@@ -1834,6 +1834,7 @@ html {
           box-sizing: border-box;
   position: relative;
   width: 100%;
+  padding-bottom: 30px;
 }
 
 .accordion_block_item_title {
@@ -1890,7 +1891,6 @@ html {
 }
 
 .accordion_block_item_block {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1918,7 +1918,7 @@ html {
 }
 
 .accordion_block_item_text {
-  margin-top: 32px;
+  margin-top: 70px;
 }
 
 .accordion_block_item_text h2 {
@@ -2321,11 +2321,13 @@ html {
 
 @media (min-width: 1200px) {
   .accordion {
-    height: 700px;
-    overflow: auto;
+    height: 500px;
+    position: relative;
+    display: block;
+    overflow-y: hidden;
   }
   .accordion_block {
-    height: 700px;
+    height: 100%;
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
   }
@@ -2333,6 +2335,20 @@ html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    width: 100%;
+    -webkit-transition: all 0.6s linear;
+    transition: all 0.6s linear;
+  }
+  .accordion_block_item.active {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: all 0.6s linear;
+    transition: all 0.6s linear;
   }
   .accordion_block_item_title {
     -webkit-box-pack: justify;
@@ -2369,6 +2385,7 @@ html {
             align-items: flex-start;
     width: 1100px;
     margin: 0 auto;
+    margin-top: 50px;
   }
   .accordion_block_item_block_other_hide {
     right: auto;

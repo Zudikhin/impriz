@@ -31,16 +31,25 @@ $(document).ready(function () {
         dots: true
     });
 
-    // $('.main_slider_item').addClass('fadeInUpSD');
+    $('.accordion_block').slick({
+        vertical: true,
+        infinite: false,
+        arrows: false,
+        verticalSwiping: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
 
-    // $(".main_slider").on("beforeChange", function() {
+    const slider = $(".accordion_block");
 
-    //     $('.main_slider_item').addClass('scaleInner');
-    //     setTimeout(() => {
-    //       $('.main_slider_item').removeClass('scaleInner');
-    //     }, 500);
-    
-    // });
+    slider.on('wheel', (function(e) {
+        e.preventDefault();
+        if (e.originalEvent.deltaY < 0) {
+            $(this).slick('slickPrev');
+        } else {
+            $(this).slick('slickNext');
+        }
+    }));
 
     $('.product_block_main_mobile_slider').slick({
         infinite: true,

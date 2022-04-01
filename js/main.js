@@ -32,24 +32,24 @@ $(document).ready(function () {
     });
 
     $('.accordion_block').slick({
-        vertical: true,
-        infinite: false,
-        arrows: false,
-        verticalSwiping: true,
+        infinite: true,
+        arrows: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        prevArrow: $('.accordion_btns_prev'),
+        nextArrow: $('.accordion_btns_next')
     });
 
-    const slider = $(".accordion_block");
+    // const slider = $(".accordion_block");
 
-    slider.on('wheel', (function(e) {
-        e.preventDefault();
-        if (e.originalEvent.deltaY < 0) {
-            $(this).slick('slickPrev');
-        } else {
-            $(this).slick('slickNext');
-        }
-    }));
+    // slider.on('wheel', (function(e) {
+    //     e.preventDefault();
+    //     if (e.originalEvent.deltaY < 0) {
+    //         $(this).slick('slickPrev');
+    //     } else {
+    //         $(this).slick('slickNext');
+    //     }
+    // }));
 
     $('.product_block_main_mobile_slider').slick({
         infinite: true,

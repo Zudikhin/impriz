@@ -155,19 +155,6 @@ html.no_scroll {
   max-height: 100%;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-html {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
 .container {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1829,6 +1816,34 @@ html {
   position: relative;
 }
 
+.accordion_btns_prev {
+  position: absolute;
+  left: 15px;
+  top: -40px;
+  cursor: pointer;
+}
+
+.accordion_btns_prev img {
+  width: 30px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion_btns_next {
+  position: absolute;
+  right: 15px;
+  top: -40px;
+  cursor: pointer;
+}
+
+.accordion_btns_next img {
+  width: 30px;
+}
+
+.accordion_block {
+  margin-top: 30px;
+}
+
 .accordion_block_item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2247,6 +2262,23 @@ html {
 }
 
 @media (min-width: 768px) {
+  .accordion_btns_prev {
+    top: -50px;
+    left: 30px;
+  }
+  .accordion_btns_prev img {
+    width: 40px;
+  }
+  .accordion_btns_next {
+    top: -50px;
+    right: 30px;
+  }
+  .accordion_btns_next img {
+    width: 40px;
+  }
+  .accordion_block {
+    margin-top: 40px;
+  }
   .accordion_block_item.num1 .accordion_block_item_img {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2443,6 +2475,20 @@ html {
   .accordion_block_item.num3 .accordion_block_item_img_info {
     width: 300px;
     margin-top: 180px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .accordion_btns {
+    width: 1296px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .accordion_btns_prev {
+    left: 0px;
+  }
+  .accordion_btns_next {
+    right: 0px;
   }
 }
 

@@ -51,6 +51,38 @@ $(document).ready(function () {
     //     }
     // }));
 
+    $('.achievement_block_mobile_slider').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        prevArrow: $('.achievement_block_mobile_btns_left'),
+        nextArrow: $('.achievement_block_mobile_btns_right')
+    });
+
+    $('.work_block_mobile_slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        prevArrow: $('.work_block_mobile_btns_left'),
+        nextArrow: $('.work_block_mobile_btns_right'),
+        responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });
+
+
+
+
     $('.product_block_main_mobile_slider').slick({
         infinite: true,
         slidesToShow: 1,
